@@ -4,63 +4,63 @@ export default {
         return {
             menu: [
                 {
-                    Lable: 'Characters',
+                    lable: 'characters',
                     url: '#',
-                    attivo: 'false'
+                    active: 'false'
 
                 },
                 {
                     lable: 'comics',
                     url: '#',
-                    attivo: 'true'
+                    active: 'true'
 
                 },
                 {
-                    Lable: 'Movies',
+                    lable: 'Movies',
                     url: '#',
-                    attivo: 'false'
+                    active: 'false'
 
                 },
                 {
-                    Lable: 'Tv',
+                    lable: 'Tv',
                     url: '#',
-                    attivo: 'false'
+                    active: 'false'
 
                 },
                 {
-                    Lable: 'Games',
+                    lable: 'Games',
                     url: '#',
-                    attivo: 'false'
+                    active: 'false'
 
                 },
                 {
-                    Lable: 'Collectibles',
+                    lable: 'Collectibles',
                     url: '#',
-                    attivo: 'false'
+                    active: 'false'
 
                 },
                 {
-                    Lable: 'Videos',
+                    lable: 'Videos',
                     url: '#',
-                    attivo: 'false'
+                    active: 'false'
 
                 },
                 {
-                    Lable: 'Fans',
+                    lable: 'Fans',
                     url: '#',
-                    attivo: 'false'
+                    active: 'false'
 
                 },
                 {
-                    Lable: 'News',
+                    lable: 'News',
                     url: '#',
-                    attivo: 'false'
+                    active: 'false'
 
                 },
                 {
-                    Lable: 'Shop',
+                    lable: 'Shop',
                     url: '#',
-                    attivo: 'false'
+                    active: 'false'
 
                 }
             ]
@@ -72,10 +72,10 @@ export default {
 <template lang="">
     <header>
         <div class="container">
-            <img class="logo" src="" alt="">
+            <img class="logo" src="../assets/Images/dc-logo.png" alt="">
             <nav>
                 <ul>
-                    <li v-for="(item, index) in menu" key="index" :class="item.attivo ? 'active' : ''">
+                    <li v-for="(item, index) in menu" key="index" :class="item.active ? 'active' : ''">
                         <a :href="item.url">{{ item.lable }}</a>
                     </li>
                 </ul>
@@ -85,12 +85,53 @@ export default {
 </template>
 
 <style lang="scss">
-header {
-    ul {
-        color: #000;
+@use '../styles/partials/variables' as *;
+@use '../styles/partials/mixins' as *;
 
-        a {
-            color: #000;
+header {
+    width: 100%;
+    height: 100px;
+    @include flex-center;
+
+    .container {
+        width: 1200px;
+        @include flex-between;
+
+        .logo {
+            margin: 1rem 0;
+        }
+
+        nav {
+            width: 60%;
+            height: 100%;
+
+            ul {
+                list-style: none;
+                height: 100%;
+                @include flex-between;
+                ;
+                text-transform: uppercase;
+
+                li {
+                    height: 100%;
+                    border-bottom: 0.3rem solid #fff;
+
+                    &:active,
+                    &:hover {
+                        border-bottom: 0.3rem solid $primary;
+                    }
+
+                    a {
+                        align-items: center;
+                        @include flex-center;
+                        height: 100%;
+                        font-family: $text-primary;
+                        font-size: 1.1rem;
+                        text-decoration: none;
+                        color: #000;
+                    }
+                }
+            }
         }
     }
 }
