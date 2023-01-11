@@ -41,7 +41,7 @@ export default {
                             <li>CPSC Certificates</li>
                             <li>Rating</li>
                             <li>Shop Help</li>
-                            Contact Us
+                            <li>Contact Us</li>
                         </ul>
                     </nav>
                     <nav>
