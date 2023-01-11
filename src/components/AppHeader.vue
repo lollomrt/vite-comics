@@ -116,7 +116,7 @@ header {
                     height: 100%;
                     border-bottom: 0.3rem solid #fff;
 
-                    &:active,
+                    &.active,
                     &:hover {
                         border-bottom: 0.3rem solid $primary;
                     }
