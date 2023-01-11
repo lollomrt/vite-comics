@@ -76,7 +76,7 @@ export default {
             <nav>
                 <ul>
                     <li v-for="(item, index) in menu" key="index" :class="item.active ? 'active' : ''">
-                        <a :href="item.url">{{ item.lable }}</a>
+                        <a  :href="item.url">{{ item.lable }}</a>
                     </li>
                 </ul>
             </nav>

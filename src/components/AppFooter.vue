@@ -116,6 +116,11 @@ footer {
                         list-style: none;
                         color: rgb(109, 109, 109);
                         font-size: 0.8rem;
+                        cursor: pointer;
+
+                        &:hover {
+                            color: #fff;
+                        }
                     }
                 }
             }
@@ -134,17 +139,20 @@ footer {
 
     .inf {
         width: 100%;
-        padding: 2rem 0;
+        height: 100px;
+        align-items: center;
         background-color: #303030;
         @include flex-center;
 
         .container {
             width: 1200px;
+            height: 50px;
             @include flex-between;
 
             button {
                 border: 0.3rem solid $primary;
-                padding: 1rem;
+                padding: 0 1rem;
+                height: 100%;
                 background-color: transparent;
                 font-size: 1.1rem;
                 text-transform: uppercase;
@@ -167,6 +175,12 @@ footer {
                     font-family: $text-primary;
                     letter-spacing: 0.1rem;
                 }
+
+                // img{
+                //     &:hover{
+
+                //     }
+                // }
             }
         }
     }
