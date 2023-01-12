@@ -85,7 +85,6 @@ footer {
 
     .sup {
         width: 100%;
-        height: 420px;
         background-image: url(../assets/Images/footer-bg.jpg);
         background-size: cover;
         background-repeat: no-repeat;
@@ -95,11 +94,13 @@ footer {
             width: 1200px;
             height: 100%;
             @include flex-between;
+            align-items: center;
 
             .navigazione {
                 display: flex;
+                height: 321px;
                 gap: 1rem;
-                padding: 3rem 0;
+                padding: 0rem 0;
                 flex-direction: column;
                 flex-wrap: wrap;
                 color: #fff;
@@ -127,6 +128,7 @@ footer {
 
             .logo-footer {
                 height: 100%;
+                height: 420px;
                 @include flex-center;
 
                 img {

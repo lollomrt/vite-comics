@@ -1,7 +1,18 @@
 <script>
-export default {
+import AppCard from './AppCard.vue'
+import dataObjects from '../assets/data/dataobjects'
 
+export default {
+    components: {
+        AppCard
+    },
+    data() {
+        return {
+            listaFumetti: dataObjects,
+        }
+    }
 }
+
 </script>
 
 <template lang="">
@@ -18,7 +29,6 @@ export default {
 .black {
     background-color: #000;
     @include flex-center;
-    height: 23.8vh;
 
     .container {
         width: 1200px;
