@@ -9,6 +9,7 @@ export default {
     data() {
         return {
             listaFumetti: dataObjects,
+            dataObjects
         }
     }
 }
@@ -18,7 +19,11 @@ export default {
 <template lang="">
     <div class="black">
         <div class="container">
-            <h1>-&lt;Content goes here&lt;-</h1>
+            <h1>ciao</h1>
+            <div class="card-container" :v-for="(fumetto,index) in listaFumetti" :key="index">
+                <img src="fumetto.thumb" alt="">
+                <span>{{ fumetto.series }}</span>
+            </div>
         </div>
     </div>   
 </template>

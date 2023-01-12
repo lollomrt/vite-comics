@@ -14,10 +14,13 @@ export default {
 </script>
 
 <template lang="">
-  <AppHeader></AppHeader>
-  <AppMain></AppMain>
-  <AppIconList></AppIconList>
-  <AppFooter></AppFooter>
+  <div>
+    <AppHeader></AppHeader>
+    <AppMain></AppMain>
+    <AppIconList></AppIconList>
+    <AppFooter></AppFooter>
+  </div>
+  
 </template>
 
 <style lang="scss">
