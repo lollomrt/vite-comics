@@ -6,61 +6,61 @@ export default {
                 {
                     lable: 'characters',
                     url: '#',
-                    active: 'false'
+                    active: false
 
                 },
                 {
                     lable: 'comics',
                     url: '#',
-                    active: 'true'
+                    active: true
 
                 },
                 {
                     lable: 'Movies',
                     url: '#',
-                    active: 'false'
+                    active: false
 
                 },
                 {
                     lable: 'Tv',
                     url: '#',
-                    active: 'false'
+                    active: false
 
                 },
                 {
                     lable: 'Games',
                     url: '#',
-                    active: 'false'
+                    active: false
 
                 },
                 {
                     lable: 'Collectibles',
                     url: '#',
-                    active: 'false'
+                    active: false
 
                 },
                 {
                     lable: 'Videos',
                     url: '#',
-                    active: 'false'
+                    active: false
 
                 },
                 {
                     lable: 'Fans',
                     url: '#',
-                    active: 'false'
+                    active: false
 
                 },
                 {
                     lable: 'News',
                     url: '#',
-                    active: 'false'
+                    active: false
 
                 },
                 {
                     lable: 'Shop',
                     url: '#',
-                    active: 'false'
+                    active: false
 
                 }
             ]
@@ -75,7 +75,7 @@ export default {
             <img class="logo" src="../assets/Images/dc-logo.png" alt="">
             <nav>
                 <ul>
-                    <li v-for="(item, index) in menu" key="index" :class="item.active ? 'active' : ''">
+                    <li v-for="(item, index) in menu" key="index" :class="item.active == true ? 'active' : ''">
                         <a  :href="item.url">{{ item.lable }}</a>
                     </li>
                 </ul>
