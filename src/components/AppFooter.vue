@@ -77,8 +77,8 @@ export default {
 </template>
 
 <style lang="scss">
-@use '../styles/partials/variables' as *;
-@use '../styles/partials/mixins' as *;
+@use '../styles/partials/variables.scss' as *;
+@use '../styles/partials/mixins.scss' as *;
 
 footer {
     width: 100%;
